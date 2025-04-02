@@ -1,0 +1,20 @@
+seed=1256874
+tmpdir=output   % directory to create where output files are placed
+topo=tract1     % topo=random chooses the sequence of modules for each pattern randomly (otherwise, use tract1 for human tractography data)
+               % to use tract1, there must be 66 modules, so set S=66 cortical regions according to DKT atlas
+S=66           % number of modules
+Z=200          % number of neurons per module
+G=12           % number of modules for each pattern
+K=100          % number of active neurons for each active module
+P=20           % total number of patterns stored in the network
+sort=0         % if sort=2: new Gaussian bump with standard deviation range measured in number of modules
+               % if sort=0: it means the previous swap with range in neurons)
+swap=1	       % as described in methods section	
+range=400      % as described in methods section
+sigma=6.9        % E_0 excitatory strength 
+delta=1.1       % I_0 global inhibition
+bin=1    	 % temporal bin in ms on which the instantaneous rate is calculated
+flush=30   	 % window to calculate the variance of the rate
+tmax=1000        % duration of simulation in ms
+rho=1   	 % Poisson noise rate in ms, usually rho=1 
+alpha=0.5     	 % noise amplitude - choose whether to put noise cue or both
